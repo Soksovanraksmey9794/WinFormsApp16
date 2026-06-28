@@ -391,7 +391,7 @@ namespace WinFormsApp16
 
         private void Reports_Click(object sender, EventArgs e)
         {
-           
+
             SqlConnection con = new SqlConnection(connString);
 
             try
@@ -431,6 +431,15 @@ namespace WinFormsApp16
                 {
                     progressBarfood.Value = 0;
                 }
+                
+                decimal foodPercent = 0;
+
+                if (totalExpense > 0)
+                {
+                    foodPercent = (food / totalExpense) * 100;
+                }
+
+                percentfood.Text = foodPercent.ToString("0.0") + "%";
                 //Shopping
 
                 SqlCommand cmdShopping = new SqlCommand(
@@ -449,6 +458,14 @@ namespace WinFormsApp16
                 {
                     progressBarshopping.Value = 0;
                 }
+                decimal shoppingPercent = 0;
+
+                if (totalExpense > 0)
+                {
+                    shoppingPercent = (shopping / totalExpense) * 100;
+                }
+
+                percentshopping.Text = shoppingPercent.ToString("0.0") + "%";
                 //Transport
 
                 SqlCommand cmdTransport = new SqlCommand(
@@ -467,6 +484,12 @@ namespace WinFormsApp16
                 {
                     progressBartransport.Value = 0;
                 }
+                decimal transportPercent = 0;
+                if(totalExpense > 0)
+                {
+                    transportPercent = (transport / totalExpense) * 100;
+                }
+                percenttransport.Text = transportPercent.ToString("0.0") + "%";
                 //Education
 
                 SqlCommand cmdEducation = new SqlCommand(
@@ -485,6 +508,12 @@ namespace WinFormsApp16
                 {
                     progressBareducation.Value = 0;
                 }
+                decimal educationPercent = 0;
+                if(totalExpense > 0)
+                {
+                    educationPercent = (education / totalExpense) * 100;
+                }
+                percenteducation.Text = educationPercent.ToString("0.0") + "%";
             }
 
 
@@ -504,7 +533,12 @@ namespace WinFormsApp16
 
         private void Dashboard_Click(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void uiLabel6_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
