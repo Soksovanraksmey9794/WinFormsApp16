@@ -1,4 +1,5 @@
 using Microsoft.Data.SqlClient;
+using Sunny.UI;
 using System;
 using System.Data;
 using System.Windows.Forms;
@@ -9,7 +10,7 @@ namespace WinFormsApp16
     {
         // ─── Connection String ────────────────────────────────────────────────
         private readonly string connString =
-            "Server=LAPTOP-4Q9KA1L3\\SQLEXPRESS;" +
+            "Server=MSI-SMEY\\SQLEXPRESS;" +
             "Database=FinanceTracker;" +
             "Trusted_Connection=True;" +
             "TrustServerCertificate=True;";
@@ -29,7 +30,7 @@ namespace WinFormsApp16
         // =====================================================================
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+
             this.WindowState = FormWindowState.Maximized;
 
             // Show Login tab first
@@ -61,7 +62,7 @@ namespace WinFormsApp16
             // Wire tab-change event so Reports loads automatically
             uiTabControlMenu1.SelectedIndexChanged += uiTabControlMenu1_SelectedIndexChanged;
         }
-
+        private bool isLoggedIn = false;
         // =====================================================================
         //  TAB CHANGED  →  load Reports when user opens that tab (index 6)
         // =====================================================================
@@ -69,6 +70,20 @@ namespace WinFormsApp16
         {
             if (uiTabControlMenu1.SelectedIndex == 6 && currentUserID > 0)
                 LoadReports();
+            if (uiTabControlMenu1.SelectedIndex == 0 || uiTabControlMenu1.SelectedIndex == 1)
+            {
+                return;
+            }
+
+            // If they try to go to any other tab and are NOT logged in
+            if (!isLoggedIn)
+            {
+                // 1. Force the menu back to the Login tab (Index 0)
+                uiTabControlMenu1.SelectedIndex = 0;
+
+                // 2. Warn them
+                MessageBox.Show("Please login first .", "Access Denied", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         // =====================================================================
@@ -86,6 +101,7 @@ namespace WinFormsApp16
         // =====================================================================
         private void uiButton9_Click(object sender, EventArgs e)
         {
+      
             string username = uiTextBox4.Text.Trim();
             string password = uiTextBox5.Text.Trim();
 
@@ -116,9 +132,19 @@ namespace WinFormsApp16
                                 currentFullName = reader["FullName"].ToString();
 
                                 uiTextBox5.Text = "";  // Clear password for security
-
                                 name_user.Text = currentFullName;
-                                uiTabControlMenu1.SelectedIndex = 2; // Go to Dashboard
+
+                                // 1. Flag state as authenticated
+                                isLoggedIn = true;
+
+                                // 2. Temporarily unhook event listener before moving tab index
+                                uiTabControlMenu1.SelectedIndexChanged -= uiTabControlMenu1_SelectedIndexChanged;
+
+                                // 3. Programmatically navigate safely to Dashboard (Index 2)
+                                uiTabControlMenu1.SelectedIndex = 2;
+
+                                // 4. Hook the navigation lock check event back up right away
+                                uiTabControlMenu1.SelectedIndexChanged += uiTabControlMenu1_SelectedIndexChanged;
 
                                 LoadDashboard();
                                 LoadIncomeData();
@@ -144,6 +170,7 @@ namespace WinFormsApp16
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        
 
         // Navigate to Register page
         private void label25_Click(object sender, EventArgs e)
@@ -951,6 +978,10 @@ namespace WinFormsApp16
             }
         }
 
+
+        // Run your authentication check
+
+
         // Stub — tab click wired in Designer
         private void Reports_Click(object sender, EventArgs e) { }
 
@@ -965,5 +996,10 @@ namespace WinFormsApp16
         private void uiLabel8_Click(object sender, EventArgs e) { }
         private void totalincome_Click(object sender, EventArgs e) { }
         private void DataGridView38_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
+
+        private void Login_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
