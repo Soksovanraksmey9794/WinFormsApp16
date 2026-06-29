@@ -103,11 +103,6 @@
             uiLabel4 = new Sunny.UI.UILabel();
             Income = new TabPage();
             uiDataGridView3 = new Sunny.UI.UIDataGridView();
-            IncomeID = new DataGridViewTextBoxColumn();
-            Source = new DataGridViewTextBoxColumn();
-            Amount = new DataGridViewTextBoxColumn();
-            Date = new DataGridViewTextBoxColumn();
-            Description = new DataGridViewTextBoxColumn();
             uiButton7 = new Sunny.UI.UIButton();
             uiButton6 = new Sunny.UI.UIButton();
             uiButton5 = new Sunny.UI.UIButton();
@@ -144,10 +139,6 @@
             icongoal4 = new Sunny.UI.UILabel();
             imageListgold = new ImageList(components);
             uiDataGridView1 = new Sunny.UI.UIDataGridView();
-            GoalID = new DataGridViewTextBoxColumn();
-            GoalName = new DataGridViewTextBoxColumn();
-            TargetAmount = new DataGridViewTextBoxColumn();
-            SavedAmount = new DataGridViewTextBoxColumn();
             uiButton3 = new Sunny.UI.UIButton();
             uiButton2 = new Sunny.UI.UIButton();
             uiButton1 = new Sunny.UI.UIButton();
@@ -224,19 +215,21 @@
             uiTabControlMenu1.Controls.Add(Expense);
             uiTabControlMenu1.Controls.Add(Goals);
             uiTabControlMenu1.Controls.Add(Reports);
+            uiTabControlMenu1.Dock = DockStyle.Fill;
             uiTabControlMenu1.DrawMode = TabDrawMode.OwnerDrawFixed;
             uiTabControlMenu1.Font = new Font("Mongolian Baiti", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
             uiTabControlMenu1.ImageList = imageListReport;
-            uiTabControlMenu1.Location = new Point(-1, 4);
+            uiTabControlMenu1.Location = new Point(0, 0);
             uiTabControlMenu1.Margin = new Padding(1, 2, 1, 2);
             uiTabControlMenu1.MenuStyle = Sunny.UI.UIMenuStyle.Custom;
             uiTabControlMenu1.Multiline = true;
             uiTabControlMenu1.Name = "uiTabControlMenu1";
             uiTabControlMenu1.SelectedIndex = 0;
-            uiTabControlMenu1.Size = new Size(1799, 895);
+            uiTabControlMenu1.Size = new Size(1441, 718);
             uiTabControlMenu1.SizeMode = TabSizeMode.Fixed;
             uiTabControlMenu1.TabBackColor = Color.FromArgb(0, 0, 192);
             uiTabControlMenu1.TabIndex = 0;
+            uiTabControlMenu1.TextAlignment = HorizontalAlignment.Left;
             // 
             // Login
             // 
@@ -254,7 +247,7 @@
             Login.Location = new Point(201, 0);
             Login.Margin = new Padding(1, 2, 1, 2);
             Login.Name = "Login";
-            Login.Size = new Size(1598, 895);
+            Login.Size = new Size(1240, 718);
             Login.TabIndex = 0;
             Login.Text = "Login";
             Login.UseVisualStyleBackColor = true;
@@ -263,10 +256,9 @@
             // 
             label25.AutoSize = true;
             label25.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label25.Location = new Point(970, 625);
-            label25.Margin = new Padding(4, 0, 4, 0);
+            label25.Location = new Point(776, 500);
             label25.Name = "label25";
-            label25.Size = new Size(118, 25);
+            label25.Size = new Size(94, 20);
             label25.TabIndex = 12;
             label25.Text = "Click here";
             label25.Click += label25_Click;
@@ -275,10 +267,9 @@
             // 
             label24.AutoSize = true;
             label24.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label24.Location = new Point(886, 582);
-            label24.Margin = new Padding(4, 0, 4, 0);
+            label24.Location = new Point(709, 466);
             label24.Name = "label24";
-            label24.Size = new Size(260, 25);
+            label24.Size = new Size(207, 20);
             label24.TabIndex = 10;
             label24.Text = "Don't have an account?";
             // 
@@ -286,20 +277,19 @@
             // 
             label23.AutoSize = true;
             label23.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label23.Location = new Point(911, 608);
-            label23.Margin = new Padding(4, 0, 4, 0);
+            label23.Location = new Point(729, 486);
             label23.Name = "label23";
-            label23.Size = new Size(0, 25);
+            label23.Size = new Size(0, 20);
             label23.TabIndex = 9;
             // 
             // uiButton9
             // 
             uiButton9.Font = new Font("Microsoft Sans Serif", 12F);
-            uiButton9.Location = new Point(911, 502);
-            uiButton9.Margin = new Padding(4, 2, 4, 2);
+            uiButton9.Location = new Point(729, 402);
+            uiButton9.Margin = new Padding(3, 2, 3, 2);
             uiButton9.MinimumSize = new Size(1, 2);
             uiButton9.Name = "uiButton9";
-            uiButton9.Size = new Size(208, 52);
+            uiButton9.Size = new Size(166, 42);
             uiButton9.TabIndex = 8;
             uiButton9.Text = "LOGIN";
             uiButton9.TipsFont = new Font("Microsoft Sans Serif", 9F);
@@ -309,23 +299,22 @@
             // 
             label22.AutoSize = true;
             label22.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label22.Location = new Point(810, 398);
-            label22.Margin = new Padding(4, 0, 4, 0);
+            label22.Location = new Point(648, 318);
             label22.Name = "label22";
-            label22.Size = new Size(114, 25);
+            label22.Size = new Size(91, 20);
             label22.TabIndex = 7;
             label22.Text = "Password";
             // 
             // uiTextBox5
             // 
             uiTextBox5.Font = new Font("Microsoft Sans Serif", 12F);
-            uiTextBox5.Location = new Point(810, 430);
-            uiTextBox5.Margin = new Padding(6, 8, 6, 8);
-            uiTextBox5.MinimumSize = new Size(1, 20);
+            uiTextBox5.Location = new Point(648, 344);
+            uiTextBox5.Margin = new Padding(5, 6, 5, 6);
+            uiTextBox5.MinimumSize = new Size(1, 16);
             uiTextBox5.Name = "uiTextBox5";
-            uiTextBox5.Padding = new Padding(6, 8, 6, 8);
+            uiTextBox5.Padding = new Padding(5, 6, 5, 6);
             uiTextBox5.ShowText = false;
-            uiTextBox5.Size = new Size(411, 38);
+            uiTextBox5.Size = new Size(329, 30);
             uiTextBox5.TabIndex = 6;
             uiTextBox5.TextAlignment = ContentAlignment.MiddleLeft;
             uiTextBox5.Watermark = "";
@@ -333,13 +322,13 @@
             // uiTextBox4
             // 
             uiTextBox4.Font = new Font("Microsoft Sans Serif", 12F);
-            uiTextBox4.Location = new Point(810, 332);
-            uiTextBox4.Margin = new Padding(6, 8, 6, 8);
-            uiTextBox4.MinimumSize = new Size(1, 20);
+            uiTextBox4.Location = new Point(648, 266);
+            uiTextBox4.Margin = new Padding(5, 6, 5, 6);
+            uiTextBox4.MinimumSize = new Size(1, 16);
             uiTextBox4.Name = "uiTextBox4";
-            uiTextBox4.Padding = new Padding(6, 8, 6, 8);
+            uiTextBox4.Padding = new Padding(5, 6, 5, 6);
             uiTextBox4.ShowText = false;
-            uiTextBox4.Size = new Size(411, 38);
+            uiTextBox4.Size = new Size(329, 30);
             uiTextBox4.TabIndex = 5;
             uiTextBox4.TextAlignment = ContentAlignment.MiddleLeft;
             uiTextBox4.Watermark = "";
@@ -348,10 +337,9 @@
             // 
             label21.AutoSize = true;
             label21.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label21.Location = new Point(810, 300);
-            label21.Margin = new Padding(4, 0, 4, 0);
+            label21.Location = new Point(648, 240);
             label21.Name = "label21";
-            label21.Size = new Size(118, 25);
+            label21.Size = new Size(94, 20);
             label21.TabIndex = 4;
             label21.Text = "Username";
             // 
@@ -359,10 +347,9 @@
             // 
             label20.AutoSize = true;
             label20.Font = new Font("Microsoft Sans Serif", 10.2F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label20.Location = new Point(954, 188);
-            label20.Margin = new Padding(4, 0, 4, 0);
+            label20.Location = new Point(763, 150);
             label20.Name = "label20";
-            label20.Size = new Size(195, 25);
+            label20.Size = new Size(152, 20);
             label20.TabIndex = 2;
             label20.Text = "Sign in to comtinue";
             // 
@@ -370,10 +357,9 @@
             // 
             label19.AutoSize = true;
             label19.Font = new Font("Microsoft Sans Serif", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label19.Location = new Point(911, 128);
-            label19.Margin = new Padding(4, 0, 4, 0);
+            label19.Location = new Point(729, 102);
             label19.Name = "label19";
-            label19.Size = new Size(269, 40);
+            label19.Size = new Size(224, 36);
             label19.TabIndex = 1;
             label19.Text = "Welcome Back";
             // 
@@ -382,10 +368,9 @@
             uiLabel7.BackColor = Color.Blue;
             uiLabel7.Font = new Font("Microsoft Sans Serif", 12F);
             uiLabel7.ForeColor = Color.FromArgb(48, 48, 48);
-            uiLabel7.Location = new Point(4, 0);
-            uiLabel7.Margin = new Padding(4, 0, 4, 0);
+            uiLabel7.Location = new Point(3, 0);
             uiLabel7.Name = "uiLabel7";
-            uiLabel7.Size = new Size(594, 808);
+            uiLabel7.Size = new Size(475, 646);
             uiLabel7.TabIndex = 0;
             // 
             // Regiser
@@ -398,9 +383,9 @@
             Regiser.Controls.Add(Groupboxsecond32);
             Regiser.Controls.Add(LblTitle31);
             Regiser.Location = new Point(201, 0);
-            Regiser.Margin = new Padding(4, 2, 4, 2);
+            Regiser.Margin = new Padding(3, 2, 3, 2);
             Regiser.Name = "Regiser";
-            Regiser.Size = new Size(1598, 895);
+            Regiser.Size = new Size(1240, 718);
             Regiser.TabIndex = 7;
             Regiser.Text = "Register";
             Regiser.UseVisualStyleBackColor = true;
@@ -411,10 +396,9 @@
             uiLabel3.ForeColor = Color.FromArgb(48, 48, 48);
             uiLabel3.ImageKey = "images.png";
             uiLabel3.ImageList = ImageUserAccount;
-            uiLabel3.Location = new Point(308, -2);
-            uiLabel3.Margin = new Padding(4, 0, 4, 0);
+            uiLabel3.Location = new Point(246, -2);
             uiLabel3.Name = "uiLabel3";
-            uiLabel3.Size = new Size(149, 135);
+            uiLabel3.Size = new Size(119, 108);
             uiLabel3.TabIndex = 5;
             // 
             // ImageUserAccount
@@ -431,20 +415,18 @@
             label26.AutoSize = true;
             label26.ImageKey = "360_F_1863901076_i3gXFrEwuDlVACWhwzNUCtJxKkfA8YSS.jpg";
             label26.ImageList = ImageUserAccount;
-            label26.Location = new Point(308, 48);
-            label26.Margin = new Padding(4, 0, 4, 0);
+            label26.Location = new Point(246, 38);
             label26.Name = "label26";
-            label26.Size = new Size(0, 30);
+            label26.Size = new Size(0, 25);
             label26.TabIndex = 4;
             // 
             // LblCreate31
             // 
             LblCreate31.Font = new Font("Microsoft Sans Serif", 12F);
             LblCreate31.ForeColor = Color.FromArgb(48, 48, 48);
-            LblCreate31.Location = new Point(529, 90);
-            LblCreate31.Margin = new Padding(4, 0, 4, 0);
+            LblCreate31.Location = new Point(423, 72);
             LblCreate31.Name = "LblCreate31";
-            LblCreate31.Size = new Size(384, 38);
+            LblCreate31.Size = new Size(307, 30);
             LblCreate31.TabIndex = 3;
             LblCreate31.Text = "Create your account to get started";
             // 
@@ -453,12 +435,12 @@
             Groupboxsecond31.Controls.Add(Lblbacltologin31);
             Groupboxsecond31.Controls.Add(LblAlready31);
             Groupboxsecond31.Font = new Font("Microsoft Sans Serif", 12F);
-            Groupboxsecond31.Location = new Point(26, 695);
-            Groupboxsecond31.Margin = new Padding(6, 8, 6, 8);
+            Groupboxsecond31.Location = new Point(21, 556);
+            Groupboxsecond31.Margin = new Padding(5, 6, 5, 6);
             Groupboxsecond31.MinimumSize = new Size(1, 2);
             Groupboxsecond31.Name = "Groupboxsecond31";
-            Groupboxsecond31.Padding = new Padding(0, 52, 0, 0);
-            Groupboxsecond31.Size = new Size(1414, 172);
+            Groupboxsecond31.Padding = new Padding(0, 42, 0, 0);
+            Groupboxsecond31.Size = new Size(1131, 138);
             Groupboxsecond31.TabIndex = 2;
             Groupboxsecond31.Text = null;
             Groupboxsecond31.TextAlignment = ContentAlignment.MiddleLeft;
@@ -499,12 +481,12 @@
             Groupboxsecond32.Controls.Add(LblUsername31);
             Groupboxsecond32.Controls.Add(LblFullName31);
             Groupboxsecond32.Font = new Font("Microsoft Sans Serif", 12F);
-            Groupboxsecond32.Location = new Point(26, 132);
-            Groupboxsecond32.Margin = new Padding(6, 8, 6, 8);
+            Groupboxsecond32.Location = new Point(21, 106);
+            Groupboxsecond32.Margin = new Padding(5, 6, 5, 6);
             Groupboxsecond32.MinimumSize = new Size(1, 2);
             Groupboxsecond32.Name = "Groupboxsecond32";
-            Groupboxsecond32.Padding = new Padding(0, 52, 0, 0);
-            Groupboxsecond32.Size = new Size(1414, 525);
+            Groupboxsecond32.Padding = new Padding(0, 42, 0, 0);
+            Groupboxsecond32.Size = new Size(1131, 420);
             Groupboxsecond32.TabIndex = 1;
             Groupboxsecond32.Text = null;
             Groupboxsecond32.TextAlignment = ContentAlignment.MiddleLeft;
@@ -670,10 +652,9 @@
             // 
             LblTitle31.Font = new Font("Microsoft Sans Serif", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             LblTitle31.ForeColor = Color.Blue;
-            LblTitle31.Location = new Point(464, 25);
-            LblTitle31.Margin = new Padding(4, 0, 4, 0);
+            LblTitle31.Location = new Point(371, 20);
             LblTitle31.Name = "LblTitle31";
-            LblTitle31.Size = new Size(531, 65);
+            LblTitle31.Size = new Size(425, 52);
             LblTitle31.TabIndex = 0;
             LblTitle31.Text = "REGISTER ACCOUNT";
             // 
@@ -696,7 +677,7 @@
             Dashboard.Location = new Point(201, 0);
             Dashboard.Margin = new Padding(1, 2, 1, 2);
             Dashboard.Name = "Dashboard";
-            Dashboard.Size = new Size(1598, 895);
+            Dashboard.Size = new Size(1240, 718);
             Dashboard.TabIndex = 2;
             Dashboard.Text = "Dashboard";
             Dashboard.UseVisualStyleBackColor = true;
@@ -707,13 +688,13 @@
             uiDatePicker1.DateCultureInfo = new System.Globalization.CultureInfo("");
             uiDatePicker1.FillColor = Color.White;
             uiDatePicker1.Font = new Font("Microsoft Sans Serif", 12F);
-            uiDatePicker1.Location = new Point(1274, 18);
-            uiDatePicker1.Margin = new Padding(6, 8, 6, 8);
+            uiDatePicker1.Location = new Point(1019, 14);
+            uiDatePicker1.Margin = new Padding(5, 6, 5, 6);
             uiDatePicker1.MaxLength = 10;
-            uiDatePicker1.MinimumSize = new Size(62, 0);
+            uiDatePicker1.MinimumSize = new Size(50, 0);
             uiDatePicker1.Name = "uiDatePicker1";
-            uiDatePicker1.Padding = new Padding(0, 0, 42, 2);
-            uiDatePicker1.Size = new Size(162, 42);
+            uiDatePicker1.Padding = new Padding(0, 0, 34, 2);
+            uiDatePicker1.Size = new Size(130, 34);
             uiDatePicker1.SymbolDropDown = 61555;
             uiDatePicker1.SymbolNormal = 61555;
             uiDatePicker1.SymbolSize = 24;
@@ -727,10 +708,9 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label5.Location = new Point(56, 378);
-            label5.Margin = new Padding(4, 0, 4, 0);
+            label5.Location = new Point(45, 302);
             label5.Name = "label5";
-            label5.Size = new Size(239, 29);
+            label5.Size = new Size(199, 25);
             label5.TabIndex = 18;
             label5.Text = "Recent Transaction";
             // 
@@ -761,8 +741,8 @@
             uiDataGridView2.EnableHeadersVisualStyles = false;
             uiDataGridView2.Font = new Font("Microsoft Sans Serif", 12F);
             uiDataGridView2.GridColor = Color.FromArgb(80, 160, 255);
-            uiDataGridView2.Location = new Point(56, 432);
-            uiDataGridView2.Margin = new Padding(4, 2, 4, 2);
+            uiDataGridView2.Location = new Point(45, 346);
+            uiDataGridView2.Margin = new Padding(3, 2, 3, 2);
             uiDataGridView2.Name = "uiDataGridView2";
             uiDataGridView2.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -778,45 +758,41 @@
             dataGridViewCellStyle5.Font = new Font("Microsoft Sans Serif", 12F);
             uiDataGridView2.RowsDefaultCellStyle = dataGridViewCellStyle5;
             uiDataGridView2.SelectedIndex = -1;
-            uiDataGridView2.Size = new Size(1224, 345);
+            uiDataGridView2.Size = new Size(979, 276);
             uiDataGridView2.StripeOddColor = Color.FromArgb(235, 243, 255);
             uiDataGridView2.TabIndex = 17;
             // 
             // tbl
             // 
             tbl.AutoSize = true;
-            tbl.Location = new Point(956, 188);
-            tbl.Margin = new Padding(4, 0, 4, 0);
+            tbl.Location = new Point(765, 150);
             tbl.Name = "tbl";
-            tbl.Size = new Size(0, 30);
+            tbl.Size = new Size(0, 25);
             tbl.TabIndex = 13;
             // 
             // tep
             // 
             tep.AutoSize = true;
-            tep.Location = new Point(541, 188);
-            tep.Margin = new Padding(4, 0, 4, 0);
+            tep.Location = new Point(433, 150);
             tep.Name = "tep";
-            tep.Size = new Size(0, 30);
+            tep.Size = new Size(0, 25);
             tep.TabIndex = 12;
             // 
             // tic
             // 
             tic.AutoSize = true;
-            tic.Location = new Point(144, 188);
-            tic.Margin = new Padding(4, 0, 4, 0);
+            tic.Location = new Point(115, 150);
             tic.Name = "tic";
-            tic.Size = new Size(0, 30);
+            tic.Size = new Size(0, 25);
             tic.TabIndex = 11;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label1.Location = new Point(129, 132);
-            label1.Margin = new Padding(4, 0, 4, 0);
+            label1.Location = new Point(103, 106);
             label1.Name = "label1";
-            label1.Size = new Size(126, 20);
+            label1.Size = new Size(106, 16);
             label1.TabIndex = 10;
             label1.Text = "TOTAL INCOME";
             // 
@@ -824,10 +800,9 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.Location = new Point(4, 8);
-            label4.Margin = new Padding(4, 0, 4, 0);
+            label4.Location = new Point(3, 6);
             label4.Name = "label4";
-            label4.Size = new Size(160, 38);
+            label4.Size = new Size(139, 32);
             label4.TabIndex = 9;
             label4.Text = "Welcome";
             // 
@@ -835,10 +810,9 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label3.Location = new Point(959, 132);
-            label3.Margin = new Padding(4, 0, 4, 0);
+            label3.Location = new Point(767, 106);
             label3.Name = "label3";
-            label3.Size = new Size(84, 20);
+            label3.Size = new Size(69, 16);
             label3.TabIndex = 8;
             label3.Text = "BALANCE";
             // 
@@ -846,10 +820,9 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Microsoft Sans Serif", 7.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label2.Location = new Point(518, 132);
-            label2.Margin = new Padding(4, 0, 4, 0);
+            label2.Location = new Point(414, 106);
             label2.Name = "label2";
-            label2.Size = new Size(126, 20);
+            label2.Size = new Size(108, 16);
             label2.TabIndex = 7;
             label2.Text = "TOTAL EXPENT";
             // 
@@ -857,10 +830,9 @@
             // 
             name_user.AutoSize = true;
             name_user.Font = new Font("Microsoft Sans Serif", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            name_user.Location = new Point(186, 8);
-            name_user.Margin = new Padding(4, 0, 4, 0);
+            name_user.Location = new Point(149, 6);
             name_user.Name = "name_user";
-            name_user.Size = new Size(186, 38);
+            name_user.Size = new Size(160, 32);
             name_user.TabIndex = 6;
             name_user.Text = "Name user";
             // 
@@ -869,10 +841,10 @@
             uiLabel6.BackColor = Color.Blue;
             uiLabel6.Font = new Font("Microsoft Sans Serif", 12F);
             uiLabel6.ForeColor = Color.FromArgb(48, 48, 48);
-            uiLabel6.Location = new Point(848, 108);
+            uiLabel6.Location = new Point(678, 86);
             uiLabel6.Margin = new Padding(1, 0, 1, 0);
             uiLabel6.Name = "uiLabel6";
-            uiLabel6.Size = new Size(320, 188);
+            uiLabel6.Size = new Size(256, 150);
             uiLabel6.TabIndex = 5;
             uiLabel6.TextAlign = ContentAlignment.MiddleCenter;
             uiLabel6.Click += uiLabel6_Click;
@@ -882,10 +854,10 @@
             uiLabel5.BackColor = Color.FromArgb(255, 128, 128);
             uiLabel5.Font = new Font("Microsoft Sans Serif", 12F);
             uiLabel5.ForeColor = Color.FromArgb(48, 48, 48);
-            uiLabel5.Location = new Point(448, 108);
+            uiLabel5.Location = new Point(358, 86);
             uiLabel5.Margin = new Padding(1, 0, 1, 0);
             uiLabel5.Name = "uiLabel5";
-            uiLabel5.Size = new Size(306, 188);
+            uiLabel5.Size = new Size(245, 150);
             uiLabel5.TabIndex = 4;
             uiLabel5.TextAlign = ContentAlignment.MiddleCenter;
             // 
@@ -894,10 +866,10 @@
             uiLabel4.BackColor = Color.FromArgb(224, 224, 224);
             uiLabel4.Font = new Font("Microsoft Sans Serif", 12F);
             uiLabel4.ForeColor = Color.FromArgb(48, 48, 48);
-            uiLabel4.Location = new Point(56, 108);
+            uiLabel4.Location = new Point(45, 86);
             uiLabel4.Margin = new Padding(1, 0, 1, 0);
             uiLabel4.Name = "uiLabel4";
-            uiLabel4.Size = new Size(281, 188);
+            uiLabel4.Size = new Size(225, 150);
             uiLabel4.TabIndex = 3;
             uiLabel4.TextAlign = ContentAlignment.MiddleCenter;
             uiLabel4.Click += uiLabel4_Click;
@@ -922,7 +894,7 @@
             Income.Location = new Point(201, 0);
             Income.Margin = new Padding(1, 2, 1, 2);
             Income.Name = "Income";
-            Income.Size = new Size(1598, 895);
+            Income.Size = new Size(1240, 718);
             Income.TabIndex = 4;
             Income.Text = "Income";
             Income.UseVisualStyleBackColor = true;
@@ -943,7 +915,6 @@
             uiDataGridView3.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             uiDataGridView3.ColumnHeadersHeight = 32;
             uiDataGridView3.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            uiDataGridView3.Columns.AddRange(new DataGridViewColumn[] { IncomeID, Source, Amount, Date, Description });
             dataGridViewCellStyle8.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle8.BackColor = SystemColors.Window;
             dataGridViewCellStyle8.Font = new Font("Microsoft Sans Serif", 12F);
@@ -955,8 +926,8 @@
             uiDataGridView3.EnableHeadersVisualStyles = false;
             uiDataGridView3.Font = new Font("Microsoft Sans Serif", 12F);
             uiDataGridView3.GridColor = Color.FromArgb(80, 160, 255);
-            uiDataGridView3.Location = new Point(101, 489);
-            uiDataGridView3.Margin = new Padding(4, 2, 4, 2);
+            uiDataGridView3.Location = new Point(81, 391);
+            uiDataGridView3.Margin = new Padding(3, 2, 3, 2);
             uiDataGridView3.Name = "uiDataGridView3";
             uiDataGridView3.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle9.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -972,54 +943,19 @@
             dataGridViewCellStyle10.Font = new Font("Microsoft Sans Serif", 12F);
             uiDataGridView3.RowsDefaultCellStyle = dataGridViewCellStyle10;
             uiDataGridView3.SelectedIndex = -1;
-            uiDataGridView3.Size = new Size(1224, 345);
+            uiDataGridView3.Size = new Size(979, 276);
             uiDataGridView3.StripeOddColor = Color.FromArgb(235, 243, 255);
             uiDataGridView3.TabIndex = 18;
-            // 
-            // IncomeID
-            // 
-            IncomeID.HeaderText = "ID";
-            IncomeID.MinimumWidth = 6;
-            IncomeID.Name = "IncomeID";
-            IncomeID.Width = 125;
-            // 
-            // Source
-            // 
-            Source.HeaderText = "Source";
-            Source.MinimumWidth = 6;
-            Source.Name = "Source";
-            Source.Width = 200;
-            // 
-            // Amount
-            // 
-            Amount.HeaderText = "Amount";
-            Amount.MinimumWidth = 6;
-            Amount.Name = "Amount";
-            Amount.Width = 200;
-            // 
-            // Date
-            // 
-            Date.HeaderText = "Date";
-            Date.MinimumWidth = 6;
-            Date.Name = "Date";
-            Date.Width = 200;
-            // 
-            // Description
-            // 
-            Description.HeaderText = "Decription";
-            Description.MinimumWidth = 6;
-            Description.Name = "Description";
-            Description.Width = 200;
             // 
             // uiButton7
             // 
             uiButton7.FillColor = Color.Red;
             uiButton7.Font = new Font("Microsoft Sans Serif", 12F);
-            uiButton7.Location = new Point(612, 429);
-            uiButton7.Margin = new Padding(4, 2, 4, 2);
+            uiButton7.Location = new Point(490, 343);
+            uiButton7.Margin = new Padding(3, 2, 3, 2);
             uiButton7.MinimumSize = new Size(1, 2);
             uiButton7.Name = "uiButton7";
-            uiButton7.Size = new Size(156, 55);
+            uiButton7.Size = new Size(125, 44);
             uiButton7.TabIndex = 15;
             uiButton7.Text = "DELETE";
             uiButton7.TipsFont = new Font("Microsoft Sans Serif", 9F);
@@ -1028,11 +964,11 @@
             // 
             uiButton6.FillColor = Color.Black;
             uiButton6.Font = new Font("Microsoft Sans Serif", 12F);
-            uiButton6.Location = new Point(378, 429);
-            uiButton6.Margin = new Padding(4, 2, 4, 2);
+            uiButton6.Location = new Point(302, 343);
+            uiButton6.Margin = new Padding(3, 2, 3, 2);
             uiButton6.MinimumSize = new Size(1, 2);
             uiButton6.Name = "uiButton6";
-            uiButton6.Size = new Size(156, 55);
+            uiButton6.Size = new Size(125, 44);
             uiButton6.TabIndex = 14;
             uiButton6.Text = "UPDATE";
             uiButton6.TipsFont = new Font("Microsoft Sans Serif", 9F);
@@ -1041,11 +977,11 @@
             // 
             uiButton5.FillColor = Color.FromArgb(0, 0, 192);
             uiButton5.Font = new Font("Microsoft Sans Serif", 12F);
-            uiButton5.Location = new Point(149, 429);
-            uiButton5.Margin = new Padding(4, 2, 4, 2);
+            uiButton5.Location = new Point(119, 343);
+            uiButton5.Margin = new Padding(3, 2, 3, 2);
             uiButton5.MinimumSize = new Size(1, 2);
             uiButton5.Name = "uiButton5";
-            uiButton5.Size = new Size(156, 55);
+            uiButton5.Size = new Size(125, 44);
             uiButton5.TabIndex = 13;
             uiButton5.Text = "INDERT";
             uiButton5.TipsFont = new Font("Microsoft Sans Serif", 9F);
@@ -1058,12 +994,12 @@
             uiComboBox1.Font = new Font("Microsoft Sans Serif", 12F);
             uiComboBox1.ItemHoverColor = Color.FromArgb(155, 200, 255);
             uiComboBox1.ItemSelectForeColor = Color.FromArgb(235, 243, 255);
-            uiComboBox1.Location = new Point(279, 198);
-            uiComboBox1.Margin = new Padding(6, 8, 6, 8);
-            uiComboBox1.MinimumSize = new Size(62, 0);
+            uiComboBox1.Location = new Point(223, 158);
+            uiComboBox1.Margin = new Padding(5, 6, 5, 6);
+            uiComboBox1.MinimumSize = new Size(50, 0);
             uiComboBox1.Name = "uiComboBox1";
-            uiComboBox1.Padding = new Padding(0, 0, 42, 2);
-            uiComboBox1.Size = new Size(449, 32);
+            uiComboBox1.Padding = new Padding(0, 0, 34, 2);
+            uiComboBox1.Size = new Size(359, 26);
             uiComboBox1.SymbolSize = 24;
             uiComboBox1.TabIndex = 12;
             uiComboBox1.TextAlignment = ContentAlignment.MiddleLeft;
@@ -1074,13 +1010,13 @@
             uiDatePicker2.DateCultureInfo = new System.Globalization.CultureInfo("");
             uiDatePicker2.FillColor = Color.White;
             uiDatePicker2.Font = new Font("Microsoft Sans Serif", 12F);
-            uiDatePicker2.Location = new Point(279, 298);
-            uiDatePicker2.Margin = new Padding(6, 8, 6, 8);
+            uiDatePicker2.Location = new Point(223, 238);
+            uiDatePicker2.Margin = new Padding(5, 6, 5, 6);
             uiDatePicker2.MaxLength = 10;
-            uiDatePicker2.MinimumSize = new Size(62, 0);
+            uiDatePicker2.MinimumSize = new Size(50, 0);
             uiDatePicker2.Name = "uiDatePicker2";
-            uiDatePicker2.Padding = new Padding(0, 0, 42, 2);
-            uiDatePicker2.Size = new Size(449, 35);
+            uiDatePicker2.Padding = new Padding(0, 0, 34, 2);
+            uiDatePicker2.Size = new Size(359, 28);
             uiDatePicker2.SymbolDropDown = 61555;
             uiDatePicker2.SymbolNormal = 61555;
             uiDatePicker2.SymbolSize = 24;
@@ -1093,13 +1029,13 @@
             // uiTextBox3
             // 
             uiTextBox3.Font = new Font("Microsoft Sans Serif", 12F);
-            uiTextBox3.Location = new Point(279, 358);
-            uiTextBox3.Margin = new Padding(6, 8, 6, 8);
-            uiTextBox3.MinimumSize = new Size(1, 18);
+            uiTextBox3.Location = new Point(223, 286);
+            uiTextBox3.Margin = new Padding(5, 6, 5, 6);
+            uiTextBox3.MinimumSize = new Size(1, 14);
             uiTextBox3.Name = "uiTextBox3";
-            uiTextBox3.Padding = new Padding(6, 5, 6, 5);
+            uiTextBox3.Padding = new Padding(5, 4, 5, 4);
             uiTextBox3.ShowText = false;
-            uiTextBox3.Size = new Size(449, 30);
+            uiTextBox3.Size = new Size(359, 24);
             uiTextBox3.TabIndex = 10;
             uiTextBox3.TextAlignment = ContentAlignment.MiddleLeft;
             uiTextBox3.Watermark = "";
@@ -1107,13 +1043,13 @@
             // uiTextBox2
             // 
             uiTextBox2.Font = new Font("Microsoft Sans Serif", 12F);
-            uiTextBox2.Location = new Point(279, 252);
-            uiTextBox2.Margin = new Padding(6, 8, 6, 8);
-            uiTextBox2.MinimumSize = new Size(1, 18);
+            uiTextBox2.Location = new Point(223, 202);
+            uiTextBox2.Margin = new Padding(5, 6, 5, 6);
+            uiTextBox2.MinimumSize = new Size(1, 14);
             uiTextBox2.Name = "uiTextBox2";
-            uiTextBox2.Padding = new Padding(6, 5, 6, 5);
+            uiTextBox2.Padding = new Padding(5, 4, 5, 4);
             uiTextBox2.ShowText = false;
-            uiTextBox2.Size = new Size(449, 30);
+            uiTextBox2.Size = new Size(359, 24);
             uiTextBox2.TabIndex = 9;
             uiTextBox2.TextAlignment = ContentAlignment.MiddleLeft;
             uiTextBox2.Watermark = "";
@@ -1121,13 +1057,13 @@
             // uiTextBox1
             // 
             uiTextBox1.Font = new Font("Microsoft Sans Serif", 12F);
-            uiTextBox1.Location = new Point(279, 145);
-            uiTextBox1.Margin = new Padding(6, 8, 6, 8);
-            uiTextBox1.MinimumSize = new Size(1, 18);
+            uiTextBox1.Location = new Point(223, 116);
+            uiTextBox1.Margin = new Padding(5, 6, 5, 6);
+            uiTextBox1.MinimumSize = new Size(1, 14);
             uiTextBox1.Name = "uiTextBox1";
-            uiTextBox1.Padding = new Padding(6, 5, 6, 5);
+            uiTextBox1.Padding = new Padding(5, 4, 5, 4);
             uiTextBox1.ShowText = false;
-            uiTextBox1.Size = new Size(449, 30);
+            uiTextBox1.Size = new Size(359, 24);
             uiTextBox1.TabIndex = 8;
             uiTextBox1.TextAlignment = ContentAlignment.MiddleLeft;
             uiTextBox1.Watermark = "";
@@ -1135,50 +1071,45 @@
             // label18
             // 
             label18.AutoSize = true;
-            label18.Location = new Point(101, 358);
-            label18.Margin = new Padding(4, 0, 4, 0);
+            label18.Location = new Point(81, 286);
             label18.Name = "label18";
-            label18.Size = new Size(142, 30);
+            label18.Size = new Size(124, 25);
             label18.TabIndex = 6;
             label18.Text = "Decription";
             // 
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new Point(101, 308);
-            label10.Margin = new Padding(4, 0, 4, 0);
+            label10.Location = new Point(81, 246);
             label10.Name = "label10";
-            label10.Size = new Size(69, 30);
+            label10.Size = new Size(62, 25);
             label10.TabIndex = 5;
             label10.Text = "Date";
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new Point(101, 252);
-            label9.Margin = new Padding(4, 0, 4, 0);
+            label9.Location = new Point(81, 202);
             label9.Name = "label9";
-            label9.Size = new Size(111, 30);
+            label9.Size = new Size(96, 25);
             label9.TabIndex = 4;
             label9.Text = "Amount";
             // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(101, 198);
-            label8.Margin = new Padding(4, 0, 4, 0);
+            label8.Location = new Point(81, 158);
             label8.Name = "label8";
-            label8.Size = new Size(86, 30);
+            label8.Size = new Size(76, 25);
             label8.TabIndex = 3;
             label8.Text = "Souce";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new Point(101, 142);
-            label6.Margin = new Padding(4, 0, 4, 0);
+            label6.Location = new Point(81, 114);
             label6.Name = "label6";
-            label6.Size = new Size(141, 30);
+            label6.Size = new Size(124, 25);
             label6.TabIndex = 2;
             label6.Text = "Income ID";
             // 
@@ -1188,10 +1119,9 @@
             label7.BackColor = Color.White;
             label7.FlatStyle = FlatStyle.Popup;
             label7.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label7.Location = new Point(511, 8);
-            label7.Margin = new Padding(4, 0, 4, 0);
+            label7.Location = new Point(409, 6);
             label7.Name = "label7";
-            label7.Size = new Size(392, 37);
+            label7.Size = new Size(328, 32);
             label7.TabIndex = 1;
             label7.Text = "INCOME MANEGMENT";
             // 
@@ -1216,7 +1146,7 @@
             Expense.Location = new Point(201, 0);
             Expense.Margin = new Padding(1, 2, 1, 2);
             Expense.Name = "Expense";
-            Expense.Size = new Size(1598, 895);
+            Expense.Size = new Size(1240, 718);
             Expense.TabIndex = 3;
             Expense.Text = "Expense";
             Expense.UseVisualStyleBackColor = true;
@@ -1250,7 +1180,7 @@
             uiDataGridView21.EnableHeadersVisualStyles = false;
             uiDataGridView21.Font = new Font("Microsoft Sans Serif", 12F);
             uiDataGridView21.GridColor = Color.FromArgb(80, 160, 255);
-            uiDataGridView21.Location = new Point(2, 578);
+            uiDataGridView21.Location = new Point(2, 462);
             uiDataGridView21.Margin = new Padding(2);
             uiDataGridView21.Name = "uiDataGridView21";
             uiDataGridView21.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
@@ -1267,7 +1197,7 @@
             dataGridViewCellStyle15.Font = new Font("Microsoft Sans Serif", 12F);
             uiDataGridView21.RowsDefaultCellStyle = dataGridViewCellStyle15;
             uiDataGridView21.SelectedIndex = -1;
-            uiDataGridView21.Size = new Size(1059, 258);
+            uiDataGridView21.Size = new Size(847, 206);
             uiDataGridView21.StripeOddColor = Color.FromArgb(235, 243, 255);
             uiDataGridView21.TabIndex = 10;
             // 
@@ -1275,11 +1205,11 @@
             // 
             uiButton21.FillColor = Color.Green;
             uiButton21.Font = new Font("Microsoft Sans Serif", 12F);
-            uiButton21.Location = new Point(118, 498);
+            uiButton21.Location = new Point(94, 398);
             uiButton21.Margin = new Padding(2);
             uiButton21.MinimumSize = new Size(1, 2);
             uiButton21.Name = "uiButton21";
-            uiButton21.Size = new Size(150, 52);
+            uiButton21.Size = new Size(120, 42);
             uiButton21.TabIndex = 3;
             uiButton21.Text = "INSERT";
             uiButton21.TipsFont = new Font("Microsoft Sans Serif", 9F);
@@ -1289,11 +1219,11 @@
             // 
             uiButton22.FillColor = Color.Blue;
             uiButton22.Font = new Font("Microsoft Sans Serif", 12F);
-            uiButton22.Location = new Point(319, 498);
+            uiButton22.Location = new Point(255, 398);
             uiButton22.Margin = new Padding(2);
             uiButton22.MinimumSize = new Size(1, 2);
             uiButton22.Name = "uiButton22";
-            uiButton22.Size = new Size(150, 52);
+            uiButton22.Size = new Size(120, 42);
             uiButton22.TabIndex = 4;
             uiButton22.Text = "UPDATE";
             uiButton22.TipsFont = new Font("Microsoft Sans Serif", 9F);
@@ -1302,11 +1232,11 @@
             // 
             uiButton23.FillColor = Color.Red;
             uiButton23.Font = new Font("Microsoft Sans Serif", 12F);
-            uiButton23.Location = new Point(532, 498);
+            uiButton23.Location = new Point(426, 398);
             uiButton23.Margin = new Padding(2);
             uiButton23.MinimumSize = new Size(1, 2);
             uiButton23.Name = "uiButton23";
-            uiButton23.Size = new Size(150, 52);
+            uiButton23.Size = new Size(120, 42);
             uiButton23.TabIndex = 5;
             uiButton23.Text = "DELETE";
             uiButton23.TipsFont = new Font("Microsoft Sans Serif", 9F);
@@ -1318,12 +1248,12 @@
             uiComboBox21.Font = new Font("Microsoft Sans Serif", 12F);
             uiComboBox21.ItemHoverColor = Color.FromArgb(155, 200, 255);
             uiComboBox21.ItemSelectForeColor = Color.FromArgb(235, 243, 255);
-            uiComboBox21.Location = new Point(234, 192);
-            uiComboBox21.Margin = new Padding(6, 8, 6, 8);
-            uiComboBox21.MinimumSize = new Size(62, 0);
+            uiComboBox21.Location = new Point(187, 154);
+            uiComboBox21.Margin = new Padding(5, 6, 5, 6);
+            uiComboBox21.MinimumSize = new Size(50, 0);
             uiComboBox21.Name = "uiComboBox21";
-            uiComboBox21.Padding = new Padding(0, 0, 42, 2);
-            uiComboBox21.Size = new Size(449, 42);
+            uiComboBox21.Padding = new Padding(0, 0, 34, 2);
+            uiComboBox21.Size = new Size(359, 34);
             uiComboBox21.SymbolSize = 24;
             uiComboBox21.TabIndex = 9;
             uiComboBox21.TextAlignment = ContentAlignment.MiddleLeft;
@@ -1334,13 +1264,13 @@
             uiDatePicker21.DateCultureInfo = new System.Globalization.CultureInfo("");
             uiDatePicker21.FillColor = Color.White;
             uiDatePicker21.Font = new Font("Microsoft Sans Serif", 12F);
-            uiDatePicker21.Location = new Point(234, 342);
-            uiDatePicker21.Margin = new Padding(6, 8, 6, 8);
+            uiDatePicker21.Location = new Point(187, 274);
+            uiDatePicker21.Margin = new Padding(5, 6, 5, 6);
             uiDatePicker21.MaxLength = 10;
-            uiDatePicker21.MinimumSize = new Size(62, 0);
+            uiDatePicker21.MinimumSize = new Size(50, 0);
             uiDatePicker21.Name = "uiDatePicker21";
-            uiDatePicker21.Padding = new Padding(0, 0, 42, 2);
-            uiDatePicker21.Size = new Size(449, 42);
+            uiDatePicker21.Padding = new Padding(0, 0, 34, 2);
+            uiDatePicker21.Size = new Size(359, 34);
             uiDatePicker21.SymbolDropDown = 61555;
             uiDatePicker21.SymbolNormal = 61555;
             uiDatePicker21.SymbolSize = 24;
@@ -1353,13 +1283,13 @@
             // uiTextBox22
             // 
             uiTextBox22.Font = new Font("Microsoft Sans Serif", 12F);
-            uiTextBox22.Location = new Point(234, 268);
-            uiTextBox22.Margin = new Padding(6, 8, 6, 8);
-            uiTextBox22.MinimumSize = new Size(1, 18);
+            uiTextBox22.Location = new Point(187, 214);
+            uiTextBox22.Margin = new Padding(5, 6, 5, 6);
+            uiTextBox22.MinimumSize = new Size(1, 14);
             uiTextBox22.Name = "uiTextBox22";
-            uiTextBox22.Padding = new Padding(6, 5, 6, 5);
+            uiTextBox22.Padding = new Padding(5, 4, 5, 4);
             uiTextBox22.ShowText = false;
-            uiTextBox22.Size = new Size(449, 42);
+            uiTextBox22.Size = new Size(359, 34);
             uiTextBox22.TabIndex = 3;
             uiTextBox22.TextAlignment = ContentAlignment.MiddleLeft;
             uiTextBox22.Watermark = "";
@@ -1367,13 +1297,13 @@
             // uiTextBox23
             // 
             uiTextBox23.Font = new Font("Microsoft Sans Serif", 12F);
-            uiTextBox23.Location = new Point(234, 415);
-            uiTextBox23.Margin = new Padding(6, 8, 6, 8);
-            uiTextBox23.MinimumSize = new Size(1, 18);
+            uiTextBox23.Location = new Point(187, 332);
+            uiTextBox23.Margin = new Padding(5, 6, 5, 6);
+            uiTextBox23.MinimumSize = new Size(1, 14);
             uiTextBox23.Name = "uiTextBox23";
-            uiTextBox23.Padding = new Padding(6, 5, 6, 5);
+            uiTextBox23.Padding = new Padding(5, 4, 5, 4);
             uiTextBox23.ShowText = false;
-            uiTextBox23.Size = new Size(449, 42);
+            uiTextBox23.Size = new Size(359, 34);
             uiTextBox23.TabIndex = 3;
             uiTextBox23.TextAlignment = ContentAlignment.MiddleLeft;
             uiTextBox23.Watermark = "";
@@ -1381,13 +1311,13 @@
             // uiTextBox21
             // 
             uiTextBox21.Font = new Font("Microsoft Sans Serif", 12F);
-            uiTextBox21.Location = new Point(234, 118);
-            uiTextBox21.Margin = new Padding(6, 8, 6, 8);
-            uiTextBox21.MinimumSize = new Size(1, 18);
+            uiTextBox21.Location = new Point(187, 94);
+            uiTextBox21.Margin = new Padding(5, 6, 5, 6);
+            uiTextBox21.MinimumSize = new Size(1, 14);
             uiTextBox21.Name = "uiTextBox21";
-            uiTextBox21.Padding = new Padding(6, 5, 6, 5);
+            uiTextBox21.Padding = new Padding(5, 4, 5, 4);
             uiTextBox21.ShowText = false;
-            uiTextBox21.Size = new Size(449, 42);
+            uiTextBox21.Size = new Size(359, 34);
             uiTextBox21.TabIndex = 7;
             uiTextBox21.TextAlignment = ContentAlignment.MiddleLeft;
             uiTextBox21.Watermark = "";
@@ -1396,10 +1326,10 @@
             // 
             uiLabel27.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             uiLabel27.ForeColor = Color.FromArgb(48, 48, 48);
-            uiLabel27.Location = new Point(2, 425);
+            uiLabel27.Location = new Point(2, 340);
             uiLabel27.Margin = new Padding(2, 0, 2, 0);
             uiLabel27.Name = "uiLabel27";
-            uiLabel27.Size = new Size(150, 32);
+            uiLabel27.Size = new Size(120, 26);
             uiLabel27.TabIndex = 6;
             uiLabel27.Text = "Description";
             // 
@@ -1407,10 +1337,10 @@
             // 
             uiLabel26.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             uiLabel26.ForeColor = Color.FromArgb(48, 48, 48);
-            uiLabel26.Location = new Point(2, 352);
+            uiLabel26.Location = new Point(2, 282);
             uiLabel26.Margin = new Padding(2, 0, 2, 0);
             uiLabel26.Name = "uiLabel26";
-            uiLabel26.Size = new Size(150, 32);
+            uiLabel26.Size = new Size(120, 26);
             uiLabel26.TabIndex = 5;
             uiLabel26.Text = "Date";
             // 
@@ -1418,10 +1348,10 @@
             // 
             uiLabel25.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             uiLabel25.ForeColor = Color.FromArgb(48, 48, 48);
-            uiLabel25.Location = new Point(2, 278);
+            uiLabel25.Location = new Point(2, 222);
             uiLabel25.Margin = new Padding(2, 0, 2, 0);
             uiLabel25.Name = "uiLabel25";
-            uiLabel25.Size = new Size(150, 32);
+            uiLabel25.Size = new Size(120, 26);
             uiLabel25.TabIndex = 4;
             uiLabel25.Text = "Amount";
             // 
@@ -1429,10 +1359,10 @@
             // 
             uiLabel24.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             uiLabel24.ForeColor = Color.FromArgb(48, 48, 48);
-            uiLabel24.Location = new Point(2, 202);
+            uiLabel24.Location = new Point(2, 162);
             uiLabel24.Margin = new Padding(2, 0, 2, 0);
             uiLabel24.Name = "uiLabel24";
-            uiLabel24.Size = new Size(150, 32);
+            uiLabel24.Size = new Size(120, 26);
             uiLabel24.TabIndex = 3;
             uiLabel24.Text = "Category";
             // 
@@ -1440,10 +1370,10 @@
             // 
             uiLabel23.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold);
             uiLabel23.ForeColor = Color.FromArgb(48, 48, 48);
-            uiLabel23.Location = new Point(2, 128);
+            uiLabel23.Location = new Point(2, 102);
             uiLabel23.Margin = new Padding(2, 0, 2, 0);
             uiLabel23.Name = "uiLabel23";
-            uiLabel23.Size = new Size(150, 32);
+            uiLabel23.Size = new Size(120, 26);
             uiLabel23.TabIndex = 2;
             uiLabel23.Text = "Expense ID";
             // 
@@ -1451,10 +1381,10 @@
             // 
             uiLabel22.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Bold | FontStyle.Underline, GraphicsUnit.Point, 0);
             uiLabel22.ForeColor = Color.Red;
-            uiLabel22.Location = new Point(100, 35);
+            uiLabel22.Location = new Point(80, 28);
             uiLabel22.Margin = new Padding(2, 0, 2, 0);
             uiLabel22.Name = "uiLabel22";
-            uiLabel22.Size = new Size(328, 60);
+            uiLabel22.Size = new Size(262, 48);
             uiLabel22.TabIndex = 1;
             uiLabel22.Text = "EXPENSE MANAGEMENT";
             uiLabel22.TextAlign = ContentAlignment.MiddleCenter;
@@ -1465,10 +1395,10 @@
             uiLabel21.ForeColor = Color.FromArgb(48, 48, 48);
             uiLabel21.ImageKey = "8910722.png";
             uiLabel21.ImageList = imageListExpense;
-            uiLabel21.Location = new Point(2, 8);
+            uiLabel21.Location = new Point(2, 6);
             uiLabel21.Margin = new Padding(2, 0, 2, 0);
             uiLabel21.Name = "uiLabel21";
-            uiLabel21.Size = new Size(91, 98);
+            uiLabel21.Size = new Size(73, 78);
             uiLabel21.TabIndex = 0;
             // 
             // imageListExpense
@@ -1497,7 +1427,7 @@
             Goals.Location = new Point(201, 0);
             Goals.Margin = new Padding(1, 2, 1, 2);
             Goals.Name = "Goals";
-            Goals.Size = new Size(1598, 895);
+            Goals.Size = new Size(1240, 718);
             Goals.TabIndex = 5;
             Goals.Text = "Goals";
             Goals.UseVisualStyleBackColor = true;
@@ -1509,10 +1439,9 @@
             icongoal4.ForeColor = Color.FromArgb(48, 48, 48);
             icongoal4.ImageKey = "Savingtarget.png";
             icongoal4.ImageList = imageListgold;
-            icongoal4.Location = new Point(4, 10);
-            icongoal4.Margin = new Padding(4, 0, 4, 0);
+            icongoal4.Location = new Point(3, 8);
             icongoal4.Name = "icongoal4";
-            icongoal4.Size = new Size(100, 52);
+            icongoal4.Size = new Size(80, 42);
             icongoal4.TabIndex = 17;
             // 
             // imageListgold
@@ -1538,7 +1467,6 @@
             uiDataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle17;
             uiDataGridView1.ColumnHeadersHeight = 32;
             uiDataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            uiDataGridView1.Columns.AddRange(new DataGridViewColumn[] { GoalID, GoalName, TargetAmount, SavedAmount });
             dataGridViewCellStyle18.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle18.BackColor = SystemColors.Window;
             dataGridViewCellStyle18.Font = new Font("Microsoft Sans Serif", 12F);
@@ -1550,8 +1478,8 @@
             uiDataGridView1.EnableHeadersVisualStyles = false;
             uiDataGridView1.Font = new Font("Microsoft Sans Serif", 12F);
             uiDataGridView1.GridColor = Color.FromArgb(80, 160, 255);
-            uiDataGridView1.Location = new Point(44, 495);
-            uiDataGridView1.Margin = new Padding(4, 2, 4, 2);
+            uiDataGridView1.Location = new Point(35, 396);
+            uiDataGridView1.Margin = new Padding(3, 2, 3, 2);
             uiDataGridView1.Name = "uiDataGridView1";
             uiDataGridView1.RowHeadersBorderStyle = DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle19.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -1567,47 +1495,19 @@
             dataGridViewCellStyle20.Font = new Font("Microsoft Sans Serif", 12F);
             uiDataGridView1.RowsDefaultCellStyle = dataGridViewCellStyle20;
             uiDataGridView1.SelectedIndex = -1;
-            uiDataGridView1.Size = new Size(972, 235);
+            uiDataGridView1.Size = new Size(778, 188);
             uiDataGridView1.StripeOddColor = Color.FromArgb(235, 243, 255);
             uiDataGridView1.TabIndex = 16;
-            // 
-            // GoalID
-            // 
-            GoalID.HeaderText = "ID";
-            GoalID.MinimumWidth = 6;
-            GoalID.Name = "GoalID";
-            GoalID.Width = 125;
-            // 
-            // GoalName
-            // 
-            GoalName.HeaderText = "Gaol Name";
-            GoalName.MinimumWidth = 6;
-            GoalName.Name = "GoalName";
-            GoalName.Width = 200;
-            // 
-            // TargetAmount
-            // 
-            TargetAmount.HeaderText = "Target";
-            TargetAmount.MinimumWidth = 6;
-            TargetAmount.Name = "TargetAmount";
-            TargetAmount.Width = 200;
-            // 
-            // SavedAmount
-            // 
-            SavedAmount.HeaderText = "Saved";
-            SavedAmount.MinimumWidth = 6;
-            SavedAmount.Name = "SavedAmount";
-            SavedAmount.Width = 200;
             // 
             // uiButton3
             // 
             uiButton3.FillColor = Color.Red;
             uiButton3.Font = new Font("Microsoft Sans Serif", 12F);
-            uiButton3.Location = new Point(589, 398);
-            uiButton3.Margin = new Padding(4, 2, 4, 2);
+            uiButton3.Location = new Point(471, 318);
+            uiButton3.Margin = new Padding(3, 2, 3, 2);
             uiButton3.MinimumSize = new Size(1, 2);
             uiButton3.Name = "uiButton3";
-            uiButton3.Size = new Size(156, 55);
+            uiButton3.Size = new Size(125, 44);
             uiButton3.TabIndex = 14;
             uiButton3.Text = "DELETE";
             uiButton3.TipsFont = new Font("Microsoft Sans Serif", 9F);
@@ -1616,11 +1516,11 @@
             // 
             uiButton2.FillColor = Color.Black;
             uiButton2.Font = new Font("Microsoft Sans Serif", 12F);
-            uiButton2.Location = new Point(386, 398);
-            uiButton2.Margin = new Padding(4, 2, 4, 2);
+            uiButton2.Location = new Point(309, 318);
+            uiButton2.Margin = new Padding(3, 2, 3, 2);
             uiButton2.MinimumSize = new Size(1, 2);
             uiButton2.Name = "uiButton2";
-            uiButton2.Size = new Size(156, 55);
+            uiButton2.Size = new Size(125, 44);
             uiButton2.TabIndex = 13;
             uiButton2.Text = "UPDATE";
             uiButton2.TipsFont = new Font("Microsoft Sans Serif", 9F);
@@ -1629,11 +1529,11 @@
             // 
             uiButton1.FillColor = Color.FromArgb(0, 0, 192);
             uiButton1.Font = new Font("Microsoft Sans Serif", 12F);
-            uiButton1.Location = new Point(191, 398);
-            uiButton1.Margin = new Padding(4, 2, 4, 2);
+            uiButton1.Location = new Point(153, 318);
+            uiButton1.Margin = new Padding(3, 2, 3, 2);
             uiButton1.MinimumSize = new Size(1, 2);
             uiButton1.Name = "uiButton1";
-            uiButton1.Size = new Size(156, 55);
+            uiButton1.Size = new Size(125, 44);
             uiButton1.TabIndex = 12;
             uiButton1.Text = "INDERT";
             uiButton1.TipsFont = new Font("Microsoft Sans Serif", 9F);
@@ -1641,73 +1541,69 @@
             // 
             // textBox4
             // 
-            textBox4.Location = new Point(284, 271);
-            textBox4.Margin = new Padding(4, 2, 4, 2);
+            textBox4.Location = new Point(227, 126);
+            textBox4.Margin = new Padding(3, 2, 3, 2);
             textBox4.Name = "textBox4";
-            textBox4.Size = new Size(460, 40);
+            textBox4.Size = new Size(369, 34);
             textBox4.TabIndex = 9;
             // 
             // textBox3
             // 
-            textBox3.Location = new Point(284, 216);
-            textBox3.Margin = new Padding(4, 2, 4, 2);
+            textBox3.Location = new Point(227, 173);
+            textBox3.Margin = new Padding(3, 2, 3, 2);
             textBox3.Name = "textBox3";
-            textBox3.Size = new Size(460, 40);
+            textBox3.Size = new Size(369, 34);
             textBox3.TabIndex = 8;
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(284, 158);
-            textBox2.Margin = new Padding(4, 2, 4, 2);
+            textBox2.Location = new Point(227, 211);
+            textBox2.Margin = new Padding(3, 2, 3, 2);
             textBox2.Name = "textBox2";
-            textBox2.Size = new Size(460, 40);
+            textBox2.Size = new Size(369, 34);
             textBox2.TabIndex = 6;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(284, 98);
-            textBox1.Margin = new Padding(4, 2, 4, 2);
+            textBox1.Location = new Point(227, 78);
+            textBox1.Margin = new Padding(3, 2, 3, 2);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(460, 40);
+            textBox1.Size = new Size(369, 34);
             textBox1.TabIndex = 5;
             // 
             // label15
             // 
             label15.AutoSize = true;
-            label15.Location = new Point(44, 275);
-            label15.Margin = new Padding(4, 0, 4, 0);
+            label15.Location = new Point(35, 220);
             label15.Name = "label15";
-            label15.Size = new Size(192, 30);
+            label15.Size = new Size(167, 25);
             label15.TabIndex = 4;
             label15.Text = "Saved Amount";
             // 
             // label14
             // 
             label14.AutoSize = true;
-            label14.Location = new Point(44, 220);
-            label14.Margin = new Padding(4, 0, 4, 0);
+            label14.Location = new Point(35, 176);
             label14.Name = "label14";
-            label14.Size = new Size(197, 30);
+            label14.Size = new Size(173, 25);
             label14.TabIndex = 3;
             label14.Text = "Target Amount";
             // 
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new Point(44, 158);
-            label13.Margin = new Padding(4, 0, 4, 0);
+            label13.Location = new Point(35, 126);
             label13.Name = "label13";
-            label13.Size = new Size(149, 30);
+            label13.Size = new Size(130, 25);
             label13.TabIndex = 2;
             label13.Text = "Goal Name";
             // 
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new Point(44, 98);
-            label12.Margin = new Padding(4, 0, 4, 0);
+            label12.Location = new Point(35, 78);
             label12.Name = "label12";
-            label12.Size = new Size(110, 30);
+            label12.Size = new Size(96, 25);
             label12.TabIndex = 1;
             label12.Text = "Goal ID";
             // 
@@ -1717,10 +1613,9 @@
             label11.BackColor = Color.White;
             label11.FlatStyle = FlatStyle.Popup;
             label11.Font = new Font("Times New Roman", 16.2F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label11.Location = new Point(589, 10);
-            label11.Margin = new Padding(4, 0, 4, 0);
+            label11.Location = new Point(471, 8);
             label11.Name = "label11";
-            label11.Size = new Size(187, 37);
+            label11.Size = new Size(161, 32);
             label11.TabIndex = 0;
             label11.Text = "Saving Goal";
             // 
@@ -1744,7 +1639,7 @@
             Reports.Location = new Point(201, 0);
             Reports.Margin = new Padding(1, 2, 1, 2);
             Reports.Name = "Reports";
-            Reports.Size = new Size(1598, 895);
+            Reports.Size = new Size(1240, 718);
             Reports.TabIndex = 6;
             Reports.Text = "Reports";
             Reports.UseVisualStyleBackColor = true;
@@ -1754,10 +1649,10 @@
             // 
             btnexit.BackColor = Color.Indigo;
             btnexit.ForeColor = SystemColors.ControlLightLight;
-            btnexit.Location = new Point(619, 803);
+            btnexit.Location = new Point(495, 642);
             btnexit.Margin = new Padding(1, 2, 1, 2);
             btnexit.Name = "btnexit";
-            btnexit.Size = new Size(188, 62);
+            btnexit.Size = new Size(150, 50);
             btnexit.TabIndex = 11;
             btnexit.Text = "Exit";
             btnexit.UseVisualStyleBackColor = false;
@@ -1790,15 +1685,15 @@
             spendingbreakdown.FillColor = Color.Transparent;
             spendingbreakdown.FillColor2 = Color.White;
             spendingbreakdown.Font = new Font("Mongolian Baiti", 14F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            spendingbreakdown.Location = new Point(81, 292);
-            spendingbreakdown.Margin = new Padding(6, 8, 6, 8);
+            spendingbreakdown.Location = new Point(65, 234);
+            spendingbreakdown.Margin = new Padding(5, 6, 5, 6);
             spendingbreakdown.MinimumSize = new Size(1, 2);
             spendingbreakdown.Name = "spendingbreakdown";
-            spendingbreakdown.Padding = new Padding(0, 52, 0, 0);
+            spendingbreakdown.Padding = new Padding(0, 42, 0, 0);
             spendingbreakdown.Radius = 35;
             spendingbreakdown.RectColor = Color.DarkBlue;
             spendingbreakdown.RectDisableColor = Color.Red;
-            spendingbreakdown.Size = new Size(1424, 479);
+            spendingbreakdown.Size = new Size(1139, 383);
             spendingbreakdown.TabIndex = 0;
             spendingbreakdown.Text = "Spending Breakdown";
             spendingbreakdown.TextAlignment = ContentAlignment.MiddleLeft;
@@ -2031,10 +1926,10 @@
             report4.BackColor = Color.Transparent;
             report4.Font = new Font("Mongolian Baiti", 12F, FontStyle.Bold);
             report4.ForeColor = Color.Red;
-            report4.Location = new Point(1102, 100);
+            report4.Location = new Point(882, 80);
             report4.Margin = new Padding(1, 0, 1, 0);
             report4.Name = "report4";
-            report4.Size = new Size(201, 42);
+            report4.Size = new Size(161, 34);
             report4.TabIndex = 10;
             report4.Text = "NET SAVING";
             report4.TextAlign = ContentAlignment.MiddleCenter;
@@ -2044,10 +1939,10 @@
             report3.BackColor = Color.Transparent;
             report3.Font = new Font("Mongolian Baiti", 12F, FontStyle.Bold);
             report3.ForeColor = Color.Red;
-            report3.Location = new Point(586, 98);
+            report3.Location = new Point(469, 78);
             report3.Margin = new Padding(1, 0, 1, 0);
             report3.Name = "report3";
-            report3.Size = new Size(221, 42);
+            report3.Size = new Size(177, 34);
             report3.TabIndex = 9;
             report3.Text = "TOTAL EXPENSE";
             report3.TextAlign = ContentAlignment.MiddleCenter;
@@ -2058,10 +1953,10 @@
             reimg3.ForeColor = Color.FromArgb(48, 48, 48);
             reimg3.ImageKey = "4599210.png";
             reimg3.ImageList = imageListReport;
-            reimg3.Location = new Point(1044, 92);
+            reimg3.Location = new Point(835, 74);
             reimg3.Margin = new Padding(1, 0, 1, 0);
             reimg3.Name = "reimg3";
-            reimg3.Size = new Size(70, 58);
+            reimg3.Size = new Size(56, 46);
             reimg3.TabIndex = 8;
             // 
             // reimg2
@@ -2070,10 +1965,10 @@
             reimg2.ForeColor = Color.FromArgb(48, 48, 48);
             reimg2.ImageKey = "10149443.png";
             reimg2.ImageList = imageListReport;
-            reimg2.Location = new Point(521, 88);
+            reimg2.Location = new Point(417, 70);
             reimg2.Margin = new Padding(1, 0, 1, 0);
             reimg2.Name = "reimg2";
-            reimg2.Size = new Size(76, 62);
+            reimg2.Size = new Size(61, 50);
             reimg2.TabIndex = 7;
             // 
             // Reimg1
@@ -2082,10 +1977,10 @@
             Reimg1.ForeColor = Color.FromArgb(48, 48, 48);
             Reimg1.ImageKey = "1571098.png";
             Reimg1.ImageList = imageListReport;
-            Reimg1.Location = new Point(58, 80);
+            Reimg1.Location = new Point(46, 64);
             Reimg1.Margin = new Padding(1, 0, 1, 0);
             Reimg1.Name = "Reimg1";
-            Reimg1.Size = new Size(91, 72);
+            Reimg1.Size = new Size(73, 58);
             Reimg1.TabIndex = 6;
             // 
             // Re3
@@ -2094,10 +1989,10 @@
             Re3.Font = new Font("Mongolian Baiti", 12F, FontStyle.Bold);
             Re3.ForeColor = Color.Red;
             Re3.ImageList = imageListReport;
-            Re3.Location = new Point(134, 100);
+            Re3.Location = new Point(107, 80);
             Re3.Margin = new Padding(1, 0, 1, 0);
             Re3.Name = "Re3";
-            Re3.Size = new Size(228, 40);
+            Re3.Size = new Size(182, 32);
             Re3.TabIndex = 5;
             Re3.Text = "TOTAL INCOME";
             Re3.TextAlign = ContentAlignment.MiddleCenter;
@@ -2107,10 +2002,10 @@
             balance2.BackColor = Color.DeepSkyBlue;
             balance2.Font = new Font("Microsoft Sans Serif", 12F);
             balance2.ForeColor = Color.FromArgb(48, 48, 48);
-            balance2.Location = new Point(1034, 152);
+            balance2.Location = new Point(827, 122);
             balance2.Margin = new Padding(1, 0, 1, 0);
             balance2.Name = "balance2";
-            balance2.Size = new Size(281, 115);
+            balance2.Size = new Size(225, 92);
             balance2.TabIndex = 4;
             balance2.TextAlign = ContentAlignment.MiddleCenter;
             // 
@@ -2119,10 +2014,10 @@
             totalexpense.BackColor = Color.Crimson;
             totalexpense.Font = new Font("Microsoft Sans Serif", 12F);
             totalexpense.ForeColor = Color.FromArgb(48, 48, 48);
-            totalexpense.Location = new Point(534, 152);
+            totalexpense.Location = new Point(427, 122);
             totalexpense.Margin = new Padding(1, 0, 1, 0);
             totalexpense.Name = "totalexpense";
-            totalexpense.Size = new Size(291, 115);
+            totalexpense.Size = new Size(233, 92);
             totalexpense.TabIndex = 3;
             totalexpense.TextAlign = ContentAlignment.MiddleCenter;
             // 
@@ -2131,10 +2026,10 @@
             totalincome.BackColor = Color.SpringGreen;
             totalincome.Font = new Font("Microsoft Sans Serif", 12F);
             totalincome.ForeColor = Color.FromArgb(48, 48, 48);
-            totalincome.Location = new Point(81, 152);
+            totalincome.Location = new Point(65, 122);
             totalincome.Margin = new Padding(1, 0, 1, 0);
             totalincome.Name = "totalincome";
-            totalincome.Size = new Size(281, 115);
+            totalincome.Size = new Size(225, 92);
             totalincome.TabIndex = 2;
             totalincome.TextAlign = ContentAlignment.MiddleCenter;
             totalincome.Click += totalincome_Click;
@@ -2146,10 +2041,10 @@
             Report1.ForeColor = Color.FromArgb(48, 48, 48);
             Report1.ImageKey = "306405.png";
             Report1.ImageList = imageListReport;
-            Report1.Location = new Point(1, 8);
+            Report1.Location = new Point(1, 6);
             Report1.Margin = new Padding(1, 0, 1, 0);
             Report1.Name = "Report1";
-            Report1.Size = new Size(80, 62);
+            Report1.Size = new Size(64, 50);
             Report1.TabIndex = 0;
             // 
             // Report2
@@ -2160,7 +2055,7 @@
             Report2.Location = new Point(0, 0);
             Report2.Margin = new Padding(1, 0, 1, 0);
             Report2.Name = "Report2";
-            Report2.Size = new Size(1599, 78);
+            Report2.Size = new Size(1279, 62);
             Report2.TabIndex = 1;
             Report2.Text = "REPORT";
             Report2.TextAlign = ContentAlignment.MiddleCenter;
@@ -2179,10 +2074,10 @@
             // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.ControlDark;
-            ClientSize = new Size(1801, 898);
+            ClientSize = new Size(1441, 718);
             Controls.Add(uiTabControlMenu1);
             Margin = new Padding(1, 2, 1, 2);
             Name = "Form1";
@@ -2371,14 +2266,5 @@
         private Sunny.UI.UILabel uiLabel3;
         private ImageList imageList1;
         private ImageList imageList2;
-        private DataGridViewTextBoxColumn IncomeID;
-        private DataGridViewTextBoxColumn Source;
-        private DataGridViewTextBoxColumn Amount;
-        private DataGridViewTextBoxColumn Date;
-        private DataGridViewTextBoxColumn Description;
-        private DataGridViewTextBoxColumn GoalID;
-        private DataGridViewTextBoxColumn GoalName;
-        private DataGridViewTextBoxColumn TargetAmount;
-        private DataGridViewTextBoxColumn SavedAmount;
     }
 }
