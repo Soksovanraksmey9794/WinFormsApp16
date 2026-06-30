@@ -101,7 +101,7 @@ namespace WinFormsApp16
         // =====================================================================
         private void uiButton9_Click(object sender, EventArgs e)
         {
-      
+
             string username = uiTextBox4.Text.Trim();
             string password = uiTextBox5.Text.Trim();
 
@@ -170,7 +170,7 @@ namespace WinFormsApp16
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        
+
 
         // Navigate to Register page
         private void label25_Click(object sender, EventArgs e)
@@ -998,6 +998,11 @@ namespace WinFormsApp16
         private void DataGridView38_CellContentClick(object sender, DataGridViewCellEventArgs e) { }
 
         private void Login_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void uiDataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
